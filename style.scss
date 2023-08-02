@@ -1,0 +1,119 @@
+//import yazı fontu
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import 'header';
+@import 'navbar';
+@import 'events';
+@import 'explore';
+@import 'tours';
+@import 'footer';
+:root {
+    --primary-color:#fc036b;
+    --secondary-color:#484872;
+    --thirdy-color:#49497e;
+    --text-color:whitesmoke; 
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+li {
+    list-style-type: none;
+}
+h4 {
+    font-size: 3vmin;
+    color: var(--secondary-color);
+    margin: 24px auto;
+}
+p {
+    color: #7c7c7c;
+    width: 80%;
+}
+img {
+    transition: transform 0.3s ease;
+}
+img:hover {
+    transform: scale(1.1);
+}
+.btn {
+    display: inline-block;
+   padding: 10px 25px;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    color: white;
+}
+.btn:hover {
+    background-color: var(--text-color);
+    color: var(--primary-color);
+}
+.line {
+    width: 150px;
+    height: 5px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    margin: 10px auto;
+}
+.navbar-menu-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    width: 40px;
+    display: none;
+}
+.active {
+    color: var(--primary-color);
+    text-decoration: underline;
+    font-weight: bold;
+}
+.events-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+    .navbar {
+
+        padding: 0;
+        &-logo {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
+        &-list {
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            background-color: var(--secondary-color);
+           
+            margin-top: -900px;
+            transition: all 0.5s ease;
+            li {
+                margin: 30px auto;
+                a {
+                    color: var(--text-color);
+                }
+            }
+        }
+        &-menu-btn {
+            display: block;
+        }
+    }
+    .mobile-menu {
+        border-bottom-right-radius: 200px;
+        margin-top: 0;
+        
+    }
+}

@@ -1,0 +1,24 @@
+.header {
+    width: 100vw;
+    height: 100vh;
+    background-image:url(./images/header-bg.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+    &-content {
+        margin-bottom: 150px;
+        color: var(--text-color);
+        text-align: center;
+        h1 {
+            font-size: 7vmin; //responsive olrak boyutunu belirler alacağı minimum dğer
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            font-size: 4vmin;
+        }
+    }
+}
